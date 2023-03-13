@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body onresize="ajustaTamanhoPalcoJogo()">
+
+    <div class="painel">
+        <div class="vidas">
+            <!-- A partir da id de cada elemento a img é alterada segundo uma ação -->
+            <img id="v1" src="imagens/coracao_cheio.png" >
+            <img id="v2" src="imagens/coracao_cheio.png" >
+            <img id="v3" src="imagens/coracao_cheio.png" >
+
+            <div class="cronometro">
+                Tempo restante: <strong id="cronometro"></strong> ?
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Inserindo função script dentro de Body para não gerar conflito -->
+    <script>
+                    document.getElementById('cronometro').innerHTML = tempo
+
+        // SetInterval tempo em que o mosquito aparece na tela
+        var criarMosquito = setInterval(function()
+        {
+            posicaoRandomica()
+        }, criarMosquitoTempo )
+
+    </script>
+    
+</body>
+</html>
